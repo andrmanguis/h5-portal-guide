@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>875直播 · 站点介绍与可信指引</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: #f4f7fc;
+            color: #1e2a3a;
+            line-height: 1.6;
+        }
+
+        a {
+            color: #c4452b;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: color 0.2s, background 0.2s;
+        }
+
+        a:hover {
+            color: #9f2e1a;
+            background: #fce9e4;
+            border-radius: 2px;
+        }
+
+        /* 深色头图 */
+        .hero {
+            background: linear-gradient(145deg, #111a28 0%, #1b293b 100%);
+            color: #e7edf5;
+            padding: 3rem 1.5rem 2.8rem;
+            text-align: center;
+            border-bottom: 6px solid #c4452b;
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            margin-bottom: 0.65rem;
+            text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+        }
+
+        .hero .sub {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            max-width: 660px;
+            margin: 0 auto 1.2rem;
+            font-weight: 300;
+        }
+
+        .hero .nav-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.6rem 3rem;
+            margin-top: 1.6rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .hero .nav-links a {
+            color: #e7edf5;
+            text-decoration: none;
+            font-weight: 450;
+            font-size: 1.05rem;
+            padding: 0.3rem 0;
+            border-bottom: 2px solid transparent;
+            transition: border 0.25s, color 0.2s;
+        }
+
+        .hero .nav-links a:hover {
+            color: #f0b8a8;
+            border-bottom-color: #c4452b;
+            background: transparent;
+        }
+
+        /* 浅色正文区 */
+        .container {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 2.8rem 1.5rem 4rem;
+        }
+
+        .intro-block {
+            background: #ffffff;
+            padding: 2.2rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+            margin-bottom: 3rem;
+        }
+
+        .intro-block p {
+            font-size: 1.06rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .intro-block p:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 1.7rem;
+            font-weight: 470;
+            margin-bottom: 1.8rem;
+            padding-left: 0.8rem;
+            border-left: 6px solid #c4452b;
+            color: #1b2a3a;
+        }
+
+        .scenes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.8rem;
+            margin: 2.2rem 0 2.8rem;
+        }
+
+        .scene-card {
+            background: white;
+            border-radius: 18px;
+            padding: 1.8rem 1.5rem 1.6rem;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.03);
+            transition: transform 0.15s, box-shadow 0.2s;
+            border: 1px solid #eaeff5;
+        }
+
+        .scene-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 26px rgba(0, 0, 0, 0.06);
+            border-color: #d6dde6;
+        }
+
+        .scene-card h3 {
+            font-size: 1.28rem;
+            font-weight: 500;
+            margin-bottom: 0.8rem;
+            color: #1f2c3a;
+        }
+
+        .scene-card p {
+            font-size: 0.98rem;
+            color: #2c3e4f;
+            line-height: 1.6;
+        }
+
+        .faq-summary {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 2rem 2rem 2.2rem;
+            margin: 2rem 0 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+            border: 1px solid #e2e9f0;
+        }
+
+        .faq-summary h3 {
+            font-size: 1.4rem;
+            font-weight: 470;
+            margin-bottom: 1.2rem;
+            color: #15212e;
+        }
+
+        .faq-item {
+            margin-bottom: 0.9rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px dashed #dce2ea;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .faq-question {
+            font-weight: 500;
+            color: #1d2b3b;
+            margin-bottom: 0.2rem;
+        }
+
+        .faq-answer {
+            font-size: 0.95rem;
+            color: #3d4d5e;
+            padding-left: 0.4rem;
+        }
+
+        .trust-note {
+            background: #eef3f9;
+            padding: 1.6rem 2rem;
+            border-radius: 18px;
+            margin: 2.2rem 0 0.2rem;
+            border-left: 6px solid #c4452b;
+        }
+
+        .trust-note p {
+            margin-bottom: 0.6rem;
+            font-size: 1rem;
+        }
+
+        .trust-note p:last-child {
+            margin-bottom: 0;
+        }
+
+        .text-link-embed {
+            margin: 0.2rem 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2.5rem 1.5rem 2rem;
+            font-size: 0.9rem;
+            color: #5b6c7a;
+            border-top: 1px solid #dce3eb;
+            background: #f8faff;
+            margin-top: 0.8rem;
+        }
+
+        footer a {
+            color: #3d5e7a;
+            text-decoration: underline;
+        }
+
+        footer a:hover {
+            color: #c4452b;
+        }
+
+        /* 响应式 */
+        @media (max-width: 680px) {
+            .hero h1 {
+                font-size: 2.0rem;
+            }
+            .hero .nav-links {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+            .container {
+                padding: 1.8rem 1rem 3rem;
+            }
+            .intro-block {
+                padding: 1.8rem 1.2rem;
+            }
+            .faq-summary {
+                padding: 1.6rem 1.2rem;
+            }
+            .scene-card {
+                padding: 1.4rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 深色头图 + 顶部导航 -->
+    <section class="hero">
+        <h1>875直播 · 站点介绍</h1>
+        <p class="sub">从内容聚合到信息可信，聚焦直播资源的透明导航</p>
+        <nav class="nav-links">
+            <a href="#site-intro">站点介绍</a>
+            <a href="#scenes">应用场景</a>
+            <a href="#faq">常见说明</a>
+            <a href="https://zh-cn-857.com" target="_blank" rel="noopener">875直播</a>
+        </nav>
+    </section>
+
+    <div class="container">
+
+        <!-- 核心介绍：站点介绍与可信说明 -->
+        <section id="site-intro" class="intro-block">
+            <p><strong>875直播</strong> 并不是一个传统意义上的“单一直播间”，而是一个围绕直播内容整理、频道索引与信息展示的导航站点。站内聚合了多个来源的公开直播数据，以目录形式帮助访问者快速定位感兴趣的频道与主题。其定位更接近“直播目录与信息中转”，而非内容生产方。</p>
+
+            <p>在可信度方面，该站点所引用的直播源大多来自已公开的推流接口或官方允许嵌入的播放链接，并在页面内附带了原始出处说明。由于直播流本身具有实时性和不确定性，平台不承诺每条链接的持续可用性，但会定期更新失效条目。对于希望系统了解某一领域直播资源的用户来说，<a href="https://zh-cn-857.com" target="_blank" rel="noopener">875直播</a> 提供了一种结构化的参照入口，尤其适合用来浏览公共直播分类、发现不同主题下的活跃频道。</p>
+        </section>
+
+        <!-- 三个场景模块 -->
+        <section id="scenes">
+            <h2 class="section-title">常用场景参考</h2>
+            <div class="scenes">
+                <div class="scene-card">
+                    <h3>频道发现与分类浏览</h3>
+                    <p>站内按地区、语言、内容类型对直播频道做了初步归类。如果你希望了解某个类别下有哪些正在直播的频道，可以通过导航分类快速展开，避免在大量无关流中筛选。</p>
+                </div>
+                <div class="scene-card">
+                    <h3>链接有效性的辅助判断</h3>
+                    <p>每个频道条目通常会附带最近一次检测的状态标识（在线、离线或待验证）。虽然检测存在延迟，但结合状态标签可以大致判断直播源是否活跃，减少逐个点击测试的成本。</p>
+                </div>
+                <div class="scene-card">
+                    <h3>学习型浏览与对比</h3>
+                    <p>对于研究直播推流技术、不同编码参数效果或界面封装方案的用户，<a href="https://zh-cn-857.com" target="_blank" rel="noopener">875直播</a> 提供的多源并列展示方式有助于横向对比同类型频道的加载速度、画质与播放器差异，是一种非官方的观察样本集合。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 常见说明（FAQ 摘要） -->
+        <section id="faq" class="faq-summary">
+            <h3>常见说明摘要</h3>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: 站点上的直播流来源可靠吗？</div>
+                <div class="faq-answer">A: 所有链接均指向公开可获取的推流地址或官方嵌入代码。平台本身不提供源，也不对第三方流的可用性做长期承诺，建议用户自行判断。</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: 为什么有些频道显示离线？</div>
+                <div class="faq-answer">A: 离线状态通常由检测脚本发现链接无法拉取或频道暂停直播导致。检测周期约 5~15 分钟，可能存在短暂的滞后，离线频道可能会在主播重新开播后自动恢复标记。</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: 是否允许提交新的直播链接？</div>
+                <div class="faq-answer">A: 站点保留对收录源的筛选权。目前主要通过公开渠道收集合规的、非侵权的直播入口，暂不开放自动提交，但可通过站内联络方式反馈建议。</div>
+            </div>
+
+            <div class="text-link-embed" style="margin-top: 1.2rem; font-size: 0.95rem; background: #f7faff; padding: 0.6rem 1rem; border-radius: 8px;">
+                📌 关于站点数据结构和更新日志，可参考 <a href="https://zh-cn-857.com" target="_blank" rel="noopener">875直播</a> 首页底部的技术说明段落。
+            </div>
+        </section>
+
+        <!-- 可信补充说明 -->
+        <div class="trust-note">
+            <p><strong>关于内容可信的补充</strong> · 本介绍页旨在从功能与信息组织的角度说明站点的性质，不构成对任何直播内容本身的背书。所有提及的直播频道均可能随时变化，建议根据需要自行验证。875直播 本身不存储、不修改任何音视频流，仅作为链接索引的呈现载体。</p>
+            <p style="margin-top: 0.5rem;">如果你对某个具体频道的来源有疑问，可直接在站内对应条目旁找到“来源标识”或“反馈”入口，以便进一步核实。</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>站点说明页 · 基于公开信息整理 · 内容仅供了解参考</p>
+        <p style="margin-top: 0.3rem;">索引入口：<a href="https://zh-cn-857.com" target="_blank" rel="noopener">875直播</a></p>
+    </footer>
+
+</body>
+</html>
