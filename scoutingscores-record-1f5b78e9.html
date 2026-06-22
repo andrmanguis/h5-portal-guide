@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>球探比分 · 知识库入口</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #f4ede8;
+            font-family: "Georgia", "Noto Serif SC", "Source Han Serif SC", serif;
+            color: #2c2b2a;
+            line-height: 1.7;
+            padding: 2rem 1.5rem;
+        }
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            background: #faf8f5;
+            padding: 2.8rem 2.5rem 3rem;
+            border-radius: 2px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02), 0 8px 24px rgba(0,0,0,0.04);
+        }
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            border-left: 4px solid #ac8e6b;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+            color: #3b332b;
+        }
+        .subhead {
+            font-size: 1rem;
+            color: #7a6b5c;
+            margin-bottom: 2.2rem;
+            font-style: italic;
+            border-bottom: 1px solid #ddd6cc;
+            padding-bottom: 0.8rem;
+        }
+        .intro {
+            margin-bottom: 2rem;
+            font-size: 1.05rem;
+            text-indent: 2em;
+        }
+        .intro strong {
+            color: #5f4b37;
+            font-weight: 600;
+        }
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin: 2.2rem 0 0.8rem 0;
+            color: #4d3e30;
+            border-bottom: 1px dashed #cec1b2;
+            padding-bottom: 0.3rem;
+        }
+        .grid-2col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.8rem;
+            margin: 1.2rem 0 0.5rem;
+        }
+        .info-card {
+            background: #f7f1ea;
+            padding: 1.3rem 1.4rem;
+            border-radius: 4px;
+            border-left: 4px solid #b2967c;
+        }
+        .info-card p {
+            font-size: 0.95rem;
+            margin-bottom: 0.6rem;
+        }
+        .info-card .label {
+            font-weight: 600;
+            color: #5f4b37;
+            display: block;
+            margin-bottom: 0.3rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+        .callout {
+            background: #f0e7dd;
+            border-left: 6px solid #8f745b;
+            padding: 1.2rem 1.6rem;
+            margin: 2rem 0 1.6rem;
+            border-radius: 0 4px 4px 0;
+            font-size: 0.98rem;
+        }
+        .callout strong {
+            color: #4f3c2b;
+        }
+        .faq-mini {
+            margin: 2rem 0 0.8rem;
+        }
+        .faq-item {
+            margin-bottom: 1.3rem;
+        }
+        .faq-q {
+            font-weight: 600;
+            color: #4d3e30;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+        .faq-a {
+            padding-left: 0.5rem;
+            border-left: 2px solid #d9cdbe;
+            color: #3d362f;
+            font-size: 0.96rem;
+        }
+        .related-links {
+            margin-top: 2.5rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid #d6cabc;
+            font-size: 0.95rem;
+        }
+        .related-links a {
+            color: #6e553b;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-color: #c9b7a4;
+        }
+        .related-links a:hover {
+            color: #3b2b1e;
+            text-decoration-color: #8f745b;
+        }
+        .inline-link {
+            color: #6e553b;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-color: #c9b7a4;
+            font-weight: 500;
+        }
+        .inline-link:hover {
+            color: #3b2b1e;
+        }
+        .footer-note {
+            margin-top: 2.8rem;
+            font-size: 0.85rem;
+            color: #8f7d6b;
+            text-align: center;
+            border-top: 1px solid #e1d7cb;
+            padding-top: 1.6rem;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem 0.8rem;
+            }
+            .container {
+                padding: 1.8rem 1.2rem;
+            }
+            h1 {
+                font-size: 1.6rem;
+                padding-left: 0.7rem;
+            }
+            .grid-2col {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            .info-card {
+                padding: 1rem;
+            }
+            .callout {
+                padding: 1rem;
+                margin: 1.6rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>球探比分 · 知识库</h1>
+    <div class="subhead">赛事数据检索 · 实时变动 · 信息整合</div>
+
+    <p class="intro">
+        当你打开一个比分站点，最迫切的需求往往不是阅读欢迎词，而是快速定位某场比赛的实时状态、历史交锋或未来赛程。
+        <strong><a href="https://scoutingscores.com" class="inline-link">球探比分</a></strong> 正是围绕这一核心场景构建的信息聚合工具——它并非资讯门户，而更像一座可交互的赛事数据库，使用者通过清晰的分类入口即可提取所需数据片段。
+    </p>
+
+    <div class="section-title">📋 内容板块速览</div>
+    <div class="grid-2col">
+        <div class="info-card">
+            <span class="label">⚽ 实时赛况</span>
+            <p>覆盖主流联赛与杯赛，包括进球、红黄牌、换人及控球率等关键事件，更新间隔通常在数秒内。</p>
+        </div>
+        <div class="info-card">
+            <span class="label">📊 数据统计</span>
+            <p>射门、角球、犯规、传球成功率等维度对比，辅助判断场上局势，而非单纯依赖直觉。</p>
+        </div>
+        <div class="info-card">
+            <span class="label">📅 赛程与结果</span>
+            <p>按日期、联赛或球队筛选，已结束的比赛提供终场比分及技术统计，未来赛程可提前查看对阵时间。</p>
+        </div>
+        <div class="info-card">
+            <span class="label">🏆 联赛积分榜</span>
+            <p>各联赛排名、胜平负、净胜球与积分变化，升降级区域一目了然，适合长期跟踪球队表现。</p>
+        </div>
+    </div>
+
+    <div class="callout">
+        <strong>💡 使用提示</strong><br>
+        网站首页默认聚焦当日焦点赛事，若需查看特定联赛或球队，可利用顶部导航栏或侧边筛选器缩小范围。比分变动时对应数字会高亮闪烁，这是最直观的感知信号。
+    </div>
+
+    <div class="section-title">❓ 常见理解要点</div>
+    <div class="faq-mini">
+        <div class="faq-item">
+            <span class="faq-q">Q：数据更新频率如何？</span>
+            <div class="faq-a">实时数据流通常延迟 10–30 秒，具体取决于赛事信号源。比赛进行中的关键事件（进球、半场、全场）优先推送。</div>
+        </div>
+        <div class="faq-item">
+            <span class="faq-q">Q：是否需要注册登录？</span>
+            <div class="faq-a">基本浏览与查询无需账号。部分个性化功能（如自定义关注联赛）可能要求注册，但核心信息均免费开放。</div>
+        </div>
+        <div class="faq-item">
+            <span class="faq-q">Q：移动端体验是否完整？</span>
+            <div class="faq-a">页面适配主流屏幕尺寸，触控操作（横滑切换日期、点选展开数据）与桌面端功能一致。</div>
+        </div>
+    </div>
+
+    <div class="related-links">
+        <p>🧩 相关信息：如果你想了解某支球队的完整赛季走势，或对比不同联赛的数据维度，可以直接从 <a href="https://scoutingscores.com">球探比分</a> 的导航区域进入对应模块。该站不提供深度分析或博彩诱导，仅呈现客观赛事数据，供使用者自行解读。</p>
+        <p style="margin-top: 0.8rem;">🔗 常见关联用途包括：快速确认比赛结果、追踪自己关注球队的实时动态、赛前查看历史交锋记录，或作为数据源辅助其他工具。</p>
+    </div>
+
+    <div class="footer-note">
+        — 知识库入口 · 基于公开数据整理 · 信息仅供参考 —
+    </div>
+</div>
+</body>
+</html>
